@@ -9,32 +9,51 @@
     html, body {
       height: 100%;
       margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f8f9fa;
       display: flex;
       flex-direction: column;
     }
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
-    }
+
     .navbar {
       background-color: #5c6b2b;
     }
+
     .navbar-brand, .nav-link {
       color: white !important;
     }
+
     .navbar-brand img {
       height: 60px;
       margin-right: 10px;
     }
+
+    .nav-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+
+    .nav-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+
     .hero {
       background: linear-gradient(to right, #79824b, #a0ac5e);
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
+
     main {
       flex: 1;
     }
+
     footer {
       background-color: #79824b;
       color: white;
@@ -46,37 +65,42 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand bg-success px-3">
-  <div class="container-fluid">
-    <a class="navbar-brand d-flex align-items-center text-white" href="index.html">
-      <img src="images/logo-gika.jpg" alt="Logo" style="height: 50px; margin-right: 10px;" />
-      <strong>PT. GREEN KAPPIOTA</strong>
-    </a>
-    <ul class="navbar-nav ms-auto d-flex flex-row gap-3">
-      <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="vision.html">Vision</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="values.html">Values</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="team.html">Team</a></li>
-      <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
-    </ul>
-  </div>
-</nav>
-
-  </div>
-</nav>
-
-<main>
-  <section class="hero">
-    <div class="container">
-      <h1>About Us</h1>
+<!-- NAVBAR -->
+<nav class="navbar px-3">
+  <div class="container-fluid d-block">
+    <div class="d-flex align-items-center mb-2">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="images/logo-gika.jpg" alt="Logo" />
+        <strong>PT. GREEN KAPPIOTA</strong>
+      </a>
     </div>
-  </section>
+    <div class="nav-scroll">
+      <ul class="nav flex-nowrap overflow-auto text-nowrap">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="vision.html">Vision</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="values.html">Values</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
 
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>About Us</h1>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<main>
   <div class="container my-5">
     <p>
-     PT. GREEN KAPPIOTA was founded in 2021 with the strength of its skilled human resources and makes it a company that can be trusted by its stakeholders.
+      <strong>PT. GREEN KAPPIOTA</strong> was founded in 2021 with the strength of its skilled human resources and makes it a company that can be trusted by its stakeholders.
     </p>
     <p>
       With a strong foundation in environmental consultancy, PT. GREEN KAPPIOTA continues to support the goals of clients in various sectors including ESG implementation, EIA supervision, and CSR strategy. The team comprises both national and international experts, ensuring high-quality service.
@@ -84,6 +108,7 @@
   </div>
 </main>
 
+<!-- FOOTER -->
 <footer>
   &copy; 2025 PT. GREEN KAPPIOTA – All rights reserved.
 </footer>
