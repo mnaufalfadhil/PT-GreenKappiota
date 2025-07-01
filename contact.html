@@ -57,11 +57,16 @@
       flex: 1;
     }
 
-    .form-container {
+    .form-container, .contact-info {
       background: white;
       border-radius: 8px;
       padding: 30px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      margin-bottom: 30px;
+    }
+
+    .form-container h3, .contact-info h3 {
+      color: #5c6b2b;
     }
   </style>
 </head>
@@ -95,35 +100,54 @@
 <section class="hero">
   <div class="container">
     <h1>Contact Us</h1>
-    <p>Send us a message below</p>
+    <p>Reach out to us or send a message directly</p>
   </div>
 </section>
 
 <!-- MAIN CONTENT -->
 <main>
   <div class="container my-5">
-    <div class="form-container">
-      <form action="https://formsubmit.co/muhammadnaufalfadhil1@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://mnaufalfadhil.github.io/PT-GreenKappiota/thankyou.html">
+    <div class="row">
+      <!-- CONTACT INFO -->
+      <div class="col-md-6 contact-info">
+        <h3>Our Contacts</h3>
+        <p><strong>M. Azhar</strong><br>
+          Email: — <br>
+          Mobile: —<br>
+          Address: Tampak Siring Blok B3/1, Puri Gading, Bekasi.
+        </p>
+        <p><strong>Dewi Damayanti</strong><br>
+          Email: <a href="mailto:dewidamayanti2614@gmail.com">dewidamayanti2614@gmail.com</a><br>
+          Mobile: +62 81293716447<br>
+          Address: Tampak Siring Blok B3/1, Puri Gading, Bekasi.
+        </p>
+      </div>
 
-        <div class="mb-3">
-          <label for="name" class="form-label">Your Name</label>
-          <input type="text" class="form-control" id="name" name="name" required />
-        </div>
+      <!-- FORM -->
+      <div class="col-md-6 form-container">
+        <h3>Send Us a Message</h3>
+        <form action="https://formsubmit.co/muhammadnaufalfadhil1@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://mnaufalfadhil.github.io/PT-GreenKappiota/thankyou.html">
 
-        <div class="mb-3">
-          <label for="email" class="form-label">Your Email</label>
-          <input type="email" class="form-control" id="email" name="email" required />
-        </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Your Name</label>
+            <input type="text" class="form-control" id="name" name="name" required />
+          </div>
 
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
-        </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Your Email</label>
+            <input type="email" class="form-control" id="email" name="email" required />
+          </div>
 
-        <button type="submit" class="btn btn-success">Send Message</button>
-      </form>
+          <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-success">Send Message</button>
+        </form>
+      </div>
     </div>
   </div>
 </main>
