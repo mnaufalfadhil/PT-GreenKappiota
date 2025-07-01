@@ -38,20 +38,11 @@
       display: none;
     }
 
-    .nav .nav-link:hover {
-      background-color: rgba(255, 255, 255, 0.2);
-      border-radius: 5px;
-    }
-
     .hero {
       background: linear-gradient(to right, #79824b, #a0ac5e);
       color: white;
       padding: 60px 20px;
       text-align: center;
-    }
-
-    main {
-      flex: 1;
     }
 
     footer {
@@ -62,8 +53,12 @@
       margin-top: auto;
     }
 
-    .contact-box {
-      background: #ffffff;
+    main {
+      flex: 1;
+    }
+
+    .form-container {
+      background: white;
       border-radius: 8px;
       padding: 30px;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -100,46 +95,35 @@
 <section class="hero">
   <div class="container">
     <h1>Contact Us</h1>
+    <p>Send us a message below</p>
   </div>
 </section>
 
 <!-- MAIN CONTENT -->
 <main>
   <div class="container my-5">
-    <div class="row">
-      <!-- Contact Info -->
-      <div class="col-md-6 mb-4">
-        <div class="contact-box">
-          <h4>Contact Information</h4>
-          <p><strong>M. Azhar</strong></p>
-          <p>Email: [your-email@example.com]<br>Mobile: [your-phone-number]</p>
-          <p><strong>Dewi Damayanti</strong></p>
-          <p>Email: dewidamayanti2614@gmail.com<br>Mobile: +62 81293716447</p>
-          <p><strong>Address:</strong><br>Tampak Siring Blok B3/1, Puri Gading, Bekasi</p>
-        </div>
-      </div>
+    <div class="form-container">
+      <form action="https://formsubmit.co/muhammadnaufalfadhil1@gmail.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://mnaufalfadhil.github.io/PT-GreenKappiota/thankyou.html">
 
-      <!-- Contact Form (dummy, non-functional) -->
-      <div class="col-md-6">
-        <div class="contact-box">
-          <h4>Send Us a Message</h4>
-          <form>
-            <div class="mb-3">
-              <label for="name" class="form-label">Your Name</label>
-              <input type="text" class="form-control" id="name" placeholder="Full name" />
-            </div>
-            <div class="mb-3">
-              <label for="email" class="form-label">Email address</label>
-              <input type="email" class="form-control" id="email" placeholder="name@example.com" />
-            </div>
-            <div class="mb-3">
-              <label for="message" class="form-label">Your Message</label>
-              <textarea class="form-control" id="message" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn btn-success">Send</button>
-          </form>
+        <div class="mb-3">
+          <label for="name" class="form-label">Your Name</label>
+          <input type="text" class="form-control" id="name" name="name" required />
         </div>
-      </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Your Email</label>
+          <input type="email" class="form-control" id="email" name="email" required />
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">Send Message</button>
+      </form>
     </div>
   </div>
 </main>
