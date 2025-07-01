@@ -8,33 +8,52 @@
   <style>
     html, body {
       height: 100%;
-      display: flex;
-      flex-direction: column;
       margin: 0;
-    }
-    body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f8f9fa;
+      display: flex;
+      flex-direction: column;
     }
+
     .navbar {
       background-color: #5c6b2b;
     }
+
     .navbar-brand, .nav-link {
       color: white !important;
     }
+
     .navbar-brand img {
       height: 60px;
       margin-right: 10px;
     }
+
+    .nav-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+    }
+
+    .nav-scroll::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav .nav-link:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 5px;
+    }
+
     .hero {
       background: linear-gradient(to right, #79824b, #a0ac5e);
       color: white;
       padding: 60px 20px;
       text-align: center;
     }
+
     main {
       flex: 1;
     }
+
     footer {
       background-color: #79824b;
       color: white;
@@ -42,59 +61,98 @@
       padding: 30px 10px;
       margin-top: auto;
     }
+
+    .team-box {
+      background: white;
+      border-radius: 8px;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .team-member {
+      margin-bottom: 30px;
+    }
+
+    .team-member h5 {
+      margin-bottom: 5px;
+    }
+
+    .team-member p {
+      margin-bottom: 0;
+    }
   </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg">
-  <div class="container">
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
-      <img src="images/logo-gika.jpg" alt="Logo" />
-      <strong>PT. GREEN KAPPIOTA</strong>
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-      <span class="navbar-toggler-icon bg-light"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="vision.html">Vision</a></li>
-        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
-        <li class="nav-item"><a class="nav-link" href="values.html">Values</a></li>
-        <li class="nav-item"><a class="nav-link active" href="team.html">Team</a></li>
-        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+<!-- NAVBAR -->
+<nav class="navbar px-3">
+  <div class="container-fluid d-block">
+    <div class="d-flex align-items-center mb-2">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="images/logo-gika.jpg" alt="Logo" />
+        <strong>PT. GREEN KAPPIOTA</strong>
+      </a>
+    </div>
+    <div class="nav-scroll">
+      <ul class="nav flex-nowrap overflow-auto text-nowrap">
+        <li class="nav-item"><a class="nav-link text-white" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="vision.html">Vision</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="services.html">Services</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="values.html">Values</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="team.html">Team</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="portfolio.html">Portfolio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
       </ul>
     </div>
   </div>
 </nav>
 
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <h1>Management Team</h1>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
 <main>
-  <section class="hero">
-    <div class="container">
-      <h1>Management Team</h1>
-    </div>
-  </section>
-
   <div class="container my-5">
-    <h4>Managing Director</h4>
-    <p><strong>Muhammad Azhar</strong>, Bachelor in Computer System</p>
-    <p>A young and energetic strategic management leader, co-founder of the company, with experience in environment including marine protected areas management and computer systems.<br/>
-    <strong>Contact:</strong> Email: [email protected] | Mobile: +62 81214056502</p>
+    <div class="team-box">
 
-    <h4>Director of Business and External</h4>
-    <p><strong>Dewi Damayanti</strong>, Bachelor in Public Health</p>
-    <strong>Contact:</strong> Email: dewidamayanti2614@gmail.com | Mobile: +62 81293716447</p>
+      <!-- Managing Director -->
+      <div class="team-member">
+        <h5>Managing Director</h5>
+        <p><strong>Muhammad Azhar, Bachelor in Computer System</strong></p>
+        <p>A young and energetic strategic management leader as a founding company with experience in environment including marine protected areas management and computer systems.</p>
+        <p>Contact: Email: ……, Mobile: ……</p>
+      </div>
 
-    <h4>Experts</h4>
-    <ul>
-      <li><strong>Prof. Dr. Ulf Henning Richter</strong> – Professor, author, and serial entrepreneur. Works on sustainability, climate and energy resilience, ESG, and global justice.</li>
-      <li><strong>Dr. Batih</strong> – Expert in energy and port management, with deep understanding of national inventory systems.</li>
-      <li><strong>Samyang, MSc</strong> – Carbon pricing expert for energy sector; advisor to the Ministry for Environment on carbon pricing.</li>
-    </ul>
+      <!-- Director of Business and External -->
+      <div class="team-member">
+        <h5>Director of Business and External</h5>
+        <p><strong>Dewi Damayanti, Bachelor in Public Health</strong></p>
+        <p>Contact: Email: dewidamayanti2614@gmail.com, Mobile: +62 81293716447</p>
+      </div>
+
+      <!-- Experts -->
+      <div class="team-member">
+        <h5>Experts</h5>
+        <p><strong>Prof. Dr. Ulf Henning Richter</strong><br />
+        A professor, author, and serial entrepreneur. His work centers around sustainability, climate and energy resilience, ESG, and global justice.</p>
+
+        <p><strong>Dr. Batih</strong><br />
+        Experienced in energy sector and port management in Indonesia. He understands national inventory and company-level carbon accounting.</p>
+
+        <p><strong>Samyang, MSc</strong><br />
+        Experienced in carbon pricing in the energy sector in Indonesia. Serves as an expert for the Ministry of Environment as a panelist on carbon pricing.</p>
+      </div>
+
+    </div>
   </div>
 </main>
 
+<!-- FOOTER -->
 <footer>
   &copy; 2025 PT. GREEN KAPPIOTA – All rights reserved.
 </footer>
